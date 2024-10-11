@@ -6,10 +6,6 @@ import Link from 'next/link';
 
 
 const HeroSection = () => {
-  const router = useRouter();
-  const handleClick = () => {
-    router.push('/create');
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center p-5 overflow-hidden bg-gradient-to-br from-black to-teal-900">
@@ -31,9 +27,9 @@ const HeroSection = () => {
           repeatType: "reverse",
         }}
       />
-      
+
       <div className="relative z-10 max-w-4xl">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -41,7 +37,7 @@ const HeroSection = () => {
         >
           Para Autonomous Organizations
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -50,15 +46,15 @@ const HeroSection = () => {
           The future of onchain governance
         </motion.p>
         <div className="flex justify-center items-center space-x-8">
-        <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-teal-500 text-white font-semibold py-3 px-8 rounded-full text-lg transition-colors duration-300 hover:bg-teal-600 hero-button"
-              onClick={handleClick}
-            >
-          <Link href={"https://app.useark.xyz/"} className='w-full h-full'>Launch App</Link>
-        </motion.button>
-          <motion.button 
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-teal-500 text-white font-semibold py-3 px-8 rounded-full text-lg transition-colors duration-300 hover:bg-teal-600 hero-button"
+
+          >
+            <Link href={"https://app.useark.xyz/"} className='w-full h-full'>Launch App</Link>
+          </motion.button>
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-white text-teal-500 font-semibold py-3 px-8 rounded-full text-lg transition-colors duration-300 hover:bg-teal-100 hover:text-teal-600 hero-button"
